@@ -1,0 +1,58 @@
+body {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  & nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1svw;
+    align-items: center;
+    background-color: rgb(69, 18, 18);
+
+    & .home {
+      padding: 1svw;
+      color: rgb(250, 244, 235);
+      font-size: x-large;
+      &:hover {
+        color: rgb(251, 112, 112);
+      }
+    }
+    & .pages {
+      display: flex;
+      gap: 3svw;
+      padding: 1svw;
+      & a {
+        text-decoration: none;
+        color: rgb(250, 244, 235);
+        font-family: monospace;
+        font-size: large;
+        font-weight: bolder;
+        &:hover {
+          color: rgb(251, 112, 112);
+        }
+      }
+      & .menu-options {
+        right: 1%;
+        position: fixed;
+        z-index: 1;
+        padding: 1svw;
+        display: none;
+        flex-direction: column;
+        & .settings {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0.1svw;
+          background-color: black;
+          backdrop-filter: blur(5px);
+          padding: 1svw;
+          border-radius: 15px;
+          gap: 1svw;
+          & i {
+            color: aliceblue;
+            font-size: xx-large;
+          }
+        }
+      }
+    }
+  }
+}

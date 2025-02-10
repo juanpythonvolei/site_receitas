@@ -1,0 +1,148 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  & .filters {
+    display: flex;
+    padding: 2svw;
+    gap: 2svw;
+    flex-direction: column;
+    & .filters-divs {
+      gap: 2svw;
+      display: flex;
+      & div {
+        padding: 2svw;
+        background-color: rgba(128, 128, 128, 0.318);
+        border-radius: 15px;
+        box-shadow: 0.4svw 0.4svw rgba(0, 0, 0, 0.35);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1svw;
+        & label {
+          & i {
+            font-family: monospace;
+            font-size: large;
+            font-weight: bolder;
+          }
+        }
+        & select {
+          border-radius: 15px;
+          padding: 0.5svw;
+          border: none;
+          width: 15svw;
+          & option {
+            font-family: monospace;
+            font-size: medium;
+            font-weight: bolder;
+          }
+        }
+        & .data {
+          border-radius: 15px;
+          border: none;
+          font-family: monospace;
+          font-size: large;
+          font-weight: bolder;
+          padding: 1svw;
+          width: 20svw;
+        }
+      }
+    }
+    & button {
+      width: 10svw;
+      padding: 1svw;
+      font-size: larger;
+      border-radius: 15px;
+      border: none;
+      box-shadow: 0.5svw 0.5svw rgba(0, 0, 0, 0.18);
+    }
+  }
+  & main {
+    margin: 2svw;
+    padding: 1svw;
+    display: flex;
+    flex-direction: column;
+    gap: 2svw;
+    justify-content: center;
+    align-items: start;
+    & .recipe {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: grey;
+      padding: 2svw;
+      border-radius: 15px;
+      gap: 3svw;
+      box-shadow: 0.5svw 0.5svw rgba(0, 0, 0, 0.18);
+      & .infos-initial {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5svw;
+        color: aliceblue;
+        font-family: monospace;
+        font-size: xx-large;
+        font-weight: bolder;
+      }
+      & .manage-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3svw;
+        & button {
+          font-size: large;
+          background-color: rgb(61, 61, 61);
+          border: none;
+          box-shadow: 0.25svw 0.25svw rgba(0, 0, 0, 0.326);
+          border-radius: 10px;
+          padding: 1svw;
+          & i {
+            font-size: x-large;
+            color: azure;
+          }
+        }
+      }
+    }
+    & .popup {
+      background-color: rgba(0, 0, 0, 0.527);
+      position: fixed;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 10svw;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      backdrop-filter: blur(5px);
+      & .confirmacao {
+        background-color: rgba(163, 163, 163, 0.759);
+        padding: 2svw;
+        border-radius: 15px;
+        box-shadow: 0.4svw 0.4svw rgba(0, 0, 0, 0.521);
+        display: flex;
+        flex-direction: column;
+        gap: 1svw;
+        & div {
+          display: flex;
+          justify-content: center;
+          gap: 2svw;
+          & button {
+            padding: 1svw;
+            border: none;
+            box-shadow: 0.4svw 0.4svw rgba(0, 0, 0, 0.521);
+            border-radius: 15px;
+            background-color: antiquewhite;
+            font-family: monospace;
+            font-size: large;
+            font-weight: bolder;
+          }
+        }
+        & label {
+          font-family: monospace;
+          font-size: large;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}

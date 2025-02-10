@@ -1,0 +1,37 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="{% static 'js/funcs_nav.js' %}"></script>
+    <nav>
+      <div class="home">
+        <i class="bi bi-house"></i>
+      </div>
+      <div class="pages">
+        <a href="#">Nova Receita</a>
+        <a href="#">Cozinheiro</a>
+        <a href="#"
+          ><i class="bi bi-gear-fill" onclick="open_menu_settings()"></i
+        ></a>
+        <div class="menu-options" id="menu-options">
+          <div class="settings">
+            <i class="bi bi-x-circle" onclick="close_menu_settings()"></i>
+            <i class="bi bi-person-circle"></i>
+            <i class="bi bi-door-closed-fill"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

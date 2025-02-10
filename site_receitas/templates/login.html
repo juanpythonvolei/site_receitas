@@ -1,0 +1,35 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <title>login</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="login-image">
+        <img
+          src="https://th.bing.com/th/id/R.b6e1fb054d6fde01f0190cc9c72bd709?rik=zPoINyIMeASFXg&riu=http%3a%2f%2fblog.cookeletroraro.com.br%2fwp-content%2fuploads%2f2017%2f03%2filha.jpg&ehk=DcVvdLVBiiZiakFD1SxMYtfgDbEiHi98DbCEyJKsN74%3d&risl=&pid=ImgRaw&r=0"
+          alt=""
+        />
+      </div>
+      <div class="login">
+        <form action="{%url 'login'%}" method="post" class="login-form">
+          {% csrf_token %}
+          <label for="">Bem vindo ao Aplicativo de Receitas</label>
+          <input type="text" name="username" placeholder="username" />
+          <input type="password" name="password" placeholder="password" />
+          <button type="submit">login</button>
+        </form>
+      </div>
+    </div>
+    {% if resposta%}
+    <div class="resposta">
+      <label for="">{{resposta}}</label>
+    </div>
+    {% endif %}
+  </body>
+</html>
