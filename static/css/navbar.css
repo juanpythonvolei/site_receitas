@@ -10,11 +10,16 @@ body {
     background-color: rgb(69, 18, 18);
 
     & .home {
-      padding: 1svw;
-      color: rgb(250, 244, 235);
-      font-size: x-large;
-      &:hover {
-        color: rgb(251, 112, 112);
+      & a {
+        text-decoration: none;
+        & i {
+          padding: 1svw;
+          color: rgb(250, 244, 235);
+          font-size: x-large;
+          &:hover {
+            color: rgb(251, 112, 112);
+          }
+        }
       }
     }
     & .pages {

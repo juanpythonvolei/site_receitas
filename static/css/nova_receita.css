@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #212121;
+  & .conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2svw;
+    & form {
+      background-color: rgba(17, 24, 39, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5svw;
+      width: 100svw;
+      gap: 2.5svw;
+      border-radius: 20px;
+      & label {
+        font-size: xx-large;
+        font-family: monospace;
+        font-weight: bolder;
+        color: aliceblue;
+      }
+      & .div-select {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5svw;
+        & label {
+          color: aliceblue;
+          font-size: x-large;
+          font-family: monospace;
+          font-weight: bolder;
+        }
+        & select {
+          width: 62svw;
+          border-radius: 15px;
+          border: none;
+          padding: 1svw;
+          box-shadow: 0.2svw 0.2svw black;
+        }
+      }
+      & .input-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5svw;
+        & label {
+          color: aliceblue;
+          font-size: x-large;
+          font-family: monospace;
+          font-weight: bolder;
+        }
+        & input {
+          width: 60svw;
+          border-radius: 15px;
+          border: none;
+          padding: 1svw;
+          box-shadow: 0.2svw 0.2svw black;
+        }
+      }
+      & .input-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5svw;
+        & label {
+          color: aliceblue;
+          font-size: x-large;
+          font-family: monospace;
+          font-weight: bolder;
+        }
+        & input {
+          width: 60svw;
+          border-radius: 15px;
+          border: none;
+          padding: 1svw;
+          box-shadow: 0.2svw 0.2svw black;
+        }
+      }
+      & .input-nome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5svw;
+        & label {
+          color: aliceblue;
+          font-size: x-large;
+          font-family: monospace;
+          font-weight: bolder;
+        }
+        & input {
+          width: 60svw;
+          border-radius: 15px;
+          border: none;
+          padding: 1svw;
+          box-shadow: 0.2svw 0.2svw black;
+        }
+      }
+      & button {
+        width: 30svw;
+        padding: 1svw;
+        border-radius: 20px;
+        font-size: x-large;
+        font-family: monospace;
+        font-weight: bolder;
+      }
+    }
+  }
+}

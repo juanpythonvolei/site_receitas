@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TOKEN_CSRF = os.getenv('TOKEN_CSRF')
 SECRET_KEY = TOKEN_CSRF
 origins = ['https://sitereceitas-production.up.railway.app','localhost','127.0.0.1']
-# origins = ['*']
+origins = ['*']
 CSRF_TRUSTED_ORIGINS = origins
 DEBUG = True
 
@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'site_receitas'
+    'site_receitas',
+    'rest_framework',
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -53,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'programa.urls'
@@ -80,6 +84,7 @@ WSGI_APPLICATION = 'programa.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 database = os.environ.get("DATABASE_PUBLIC_URL")
+
 DATABASES = {
     'default':dj_database_url.config(
         default=database,

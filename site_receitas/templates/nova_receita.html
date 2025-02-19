@@ -1,0 +1,58 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/nova_receita.css' %}" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    {% include 'navbar.html'%}
+    <!-- From Uiverse.io by zanina-yassine -->
+    <div class="conteudo">
+      <form action="{% url 'nova_receita'%}" method="post">
+        <label for="">Crie aqui sua Receita</label>
+        {% csrf_token %}
+        <div class="div-select">
+          <label for="">Tipo</label>
+          <select name="tipos" id="">
+            <option value="Doce">Doce</option>
+            <option value="Salgado">Salgado</option>
+            <option value="Bebida">Bebida</option>
+          </select>
+        </div>
+        <div class="input-data">
+          <label for="">Data</label>
+          <input
+            type="date"
+            name="data"
+            id=""
+            placeholder="Insira a data da Receita"
+          />
+        </div>
+        <div class="input-infos">
+          <label for="">Informações</label>
+          <input
+            type="text"
+            name="infos"
+            placeholder="Insira as informações da receita"
+            required
+          />
+        </div>
+        <div class="input-nome">
+          <label for="">Nome da Receita</label>
+          <input
+            type="text"
+            name="nome"
+            placeholder="Insira o nome da receita"
+            required
+          />
+        </div>
+        <button type="submit">Salvar receita</button>
+      </form>
+    </div>
+  </body>
+</html>

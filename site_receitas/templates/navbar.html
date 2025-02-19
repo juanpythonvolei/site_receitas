@@ -16,10 +16,10 @@
     <script src="{% static 'js/funcs_nav.js' %}"></script>
     <nav>
       <div class="home">
-        <i class="bi bi-house"></i>
+        <a href="{% url 'load_recipes'%}"><i class="bi bi-house"> </i></a>
       </div>
       <div class="pages">
-        <a href="#">Nova Receita</a>
+        <a href="{% url 'nova_receita_page'%}">Nova Receita</a>
         <a href="#">Cozinheiro</a>
         <a href="#"
           ><i class="bi bi-gear-fill" onclick="open_menu_settings()"></i
@@ -27,8 +27,14 @@
         <div class="menu-options" id="menu-options">
           <div class="settings">
             <i class="bi bi-x-circle" onclick="close_menu_settings()"></i>
-            <i class="bi bi-person-circle"></i>
-            <i class="bi bi-door-closed-fill"></i>
+            <a
+              href="
+            {% url 'perfil'%}"
+              ><i class="bi bi-person-circle"></i
+            ></a>
+            <a href="{% url 'login' %}"
+              ><i class="bi bi-door-closed-fill"></i
+            ></a>
           </div>
         </div>
       </div>

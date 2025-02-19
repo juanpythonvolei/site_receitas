@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/perfil.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% include 'navbar.html'%}
+    <div class="conteudo">
+      Usuário: {{infos.nome}} <br />
+      Total de Receitas cadastradas: {{dados}}
+    </div>
+    <div class="alteracao">
+      <form action="{% url 'mudar_senha'%}" method="post">
+        {% csrf_token %}
+        <div>
+          <label for="">Altere aqui a sua senha</label>
+          <input
+            type="password"
+            required
+            placeholder="Nova Senha"
+            name="senha"
+          />
+        </div>
+        <button type="submit">Alterar</button>
+      </form>
+      <div class="apagar_perfil">
+        <a href="{% url 'apagar_perfil'%}"><i class="bi bi-trash3-fill"></i></a>
+      </div>
+    </div>
+  </body>
+</html>

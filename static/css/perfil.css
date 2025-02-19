@@ -1,0 +1,62 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  & .conteudo {
+    margin: 1svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: monospace;
+  }
+  & .alteracao {
+    margin: 1svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: monospace;
+    & form {
+      & input {
+        border: none;
+        border-radius: 20px;
+        padding: 1svw;
+        font-weight: bolder;
+        font-size: large;
+        font-family: monospace;
+        background-color: rgba(0, 0, 0, 0.507);
+        box-shadow: 0.3svw 0.3svw rgba(0, 0, 0, 0.144);
+        color: aliceblue;
+        &::placeholder {
+          color: aliceblue;
+        }
+      }
+      & button {
+        font-weight: bolder;
+        font-size: large;
+        font-family: monospace;
+        padding: 1svw;
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0.3svw 0.3svw rgba(0, 0, 0, 0.261);
+        background-color: rgba(0, 0, 0, 0.588);
+        color: aliceblue;
+      }
+    }
+    & .apagar_perfil {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & a {
+        font-size: xx-large;
+        color: red;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -23,5 +23,11 @@ urlpatterns = [
     path('', home),
     path('login/',login,name='login'),
     path('home/filtros/',load_recipes,name='load_recipes'),
-    path('home/delecao/',delete_recipe,name='apagar_receita')
+    path('home/delecao/',delete_recipe,name='apagar_receita'),
+    path('home/adicao/',load_new_recipes,name='nova_receita_page'),
+    path('home/adicao/acao/',new_recipe,name='nova_receita'),
+    path('home/visualizacao/',see_recipe,name='ver_receita'),
+    path('home/perfil/',profile,name='perfil'),
+    path('home/perfil/alteracaosenha/',update_password,name='mudar_senha'),
+    path('home/perfil/exclusao/',delete_profile,name='apagar_perfil')
 ]

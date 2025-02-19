@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  & .verreceita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1svw;
+    & .info {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
