@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TOKEN_CSRF = os.getenv('TOKEN_CSRF')
 SECRET_KEY = TOKEN_CSRF
 origins = ['https://sitereceitas-production.up.railway.app','localhost','127.0.0.1']
-origins = ['*']
+
 CSRF_TRUSTED_ORIGINS = origins
 DEBUG = True
 
